@@ -1,0 +1,151 @@
+body {
+    background-color: #191118;
+    background-image: url(http://www.transparenttextures.com/patterns/green-dust-and-scratches.png);
+    font-family: Arial;
+}
+.type {
+	margin: 5px 0;
+	text-align: center;
+}
+h1, h3 {
+	color: oldlace;
+	text-align: center;
+}
+h6 {
+	margin: 0 0 30px;
+	padding: 0;
+}
+
+.background {
+	display: inline-block;
+	width: 219px;
+	height: 320px;
+	padding-right: 10px;
+	position: relative;;
+	border-radius: 20px;
+    background-color: #080007;
+    background-image: url(http://www.transparenttextures.com/patterns/fresh-snow.png);
+	margin-bottom: 30px;
+     clear: both;
+      -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+     -webkit-animation-duration: .3s;
+  animation-duration: .35s;
+  
+}
+
+.card {
+	display: block;
+	width:100%;
+	height: 320px;
+	position: relative;
+	z-index: 500;
+	background-size: contain;
+	background-repeat: no-repeat;;
+	padding: 15px 15px 50px;
+}
+
+.card h6 {
+	margin-bottom: 30px;
+}
+
+.name {
+	margin: 0 0 0 50px;
+}
+
+.number {
+	/*margin: 55px 50px;*/
+	text-align: right;
+}
+
+.card img {
+	width: 75%;
+	margin: auto 12.5%;
+	min-height: 160px;
+}
+
+
+.dark {
+	color: #ddd;
+}
+.button:hover {
+	color: yellow;
+}
+
+.show {
+	  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipInY;
+  animation-name: flipInY;
+}
+.hide {
+	-webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipOutY;
+  animation-name: flipOutY;
+}
+
+.background.ng-hide-remove {animation: 0.35s flipInY ease;}
+.background.ng-hide-add {animation: 0.35s flipOutY ease;}
+
+@-webkit-keyframes flipInY {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+@keyframes flipInY {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+
+
+/*exit*/
+@-webkit-keyframes flipOutY {
+  from {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+
+  to {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes flipOutY {
+  from {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+
+
+  to {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    opacity: 0;
+  }
+}

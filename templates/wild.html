@@ -1,0 +1,9 @@
+<div class="background" ng-class="{'show': pokemon.bool, 'hide': !pokemon.bool}" ng-click="get1($index)">
+    <div class="card"  ng-class="{'dark': pokemon.lastType === 'dark'}" style="background-image: url({{pokemon.pokeImg}})">
+<h5 class="name">{{pokemon.name}} <span class="number">#{{ pokemon.number }}</span></h5>
+<img ng-src="{{pokemon.sprite}}" alt="">
+<h5 class="type">Type: <span ng-repeat="type in pokemon.types">{{capitalize(type.name)}}<span ng-if="!$last">, </span></span></h5>
+<h6>Moves: <span ng-repeat="move in pokemon.moves | limitTo:6">{{move.name}}<span ng-if="!$last">, </span></span></h6>
+<!-- <p class="number"></p> -->
+    </div>
+</div>
